@@ -1,5 +1,7 @@
 # Ansible Role: PHP
 
+*I have forked the geerlingguy's PHP role in order to add the configuration of the php.ini file for the CLI environment.*
+
 [![Build Status](https://travis-ci.org/geerlingguy/ansible-role-php.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-php)
 
 Installs PHP on RedHat/CentOS and Debian/Ubuntu servers.
