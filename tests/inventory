@@ -1,4 +1,1 @@
-#[vagrant]
-#ansible.role.php.dev
-
 localhost ansible_connection=local

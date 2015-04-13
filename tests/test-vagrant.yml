@@ -1,6 +1,5 @@
 ---
-- hosts: localhost
-#  remote_user: root
+- hosts: all
   sudo: yes
   vars:
     php_enable_webserver: false
