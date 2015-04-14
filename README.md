@@ -1,5 +1,7 @@
 # Ansible Role: PHP
 
+*I have forked the geerlingguy's PHP role in order to add the configuration of the php.ini file for the CLI environment.*
+
 [![Build Status](https://travis-ci.org/geerlingguy/ansible-role-php.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-php)
 
 Installs PHP on RedHat/CentOS and Debian/Ubuntu servers.
@@ -55,6 +57,17 @@ By default, all the extra defaults below are applied through the php.ini include
     php_short_open_tag: false
     php_error_reporting: "E_ALL & ~E_DEPRECATED & ~E_STRICT"
     php_display_errors: "Off"
+
+Also, the PHP CLI environment uses the same variables as the web server by default, but you can redefine some of them with the following variables:
+
+    php_cli_memory_limit: "256M"
+    php_cli_max_execution_time: "60"
+    php_cli_realpath_cache_size: "32K"
+    php_cli_upload_max_filesize: "64M"
+    php_cli_date_timezone: "Europe/London"
+    php_cli_short_open_tag: false
+    php_cli_error_reporting: "E_ALL & ~E_DEPRECATED & ~E_STRICT"
+    php_cli_display_errors: "Off"
 
 Various defaults for PHP. Only used if `php_use_managed_ini` is set to `true`.
 
